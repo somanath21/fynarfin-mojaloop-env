@@ -1,262 +1,262 @@
-central:
-  enabled: true
-
-  centralledger:
+mojaloop:
+  central:
     enabled: true
-    nameOverride: centralledger
-    centralledger-service:
-      ingress:
-        enabled: true
-        hostname: central-ledger.sandbox.fynarfin.io
-    centralledger-handler-transfer-prepare:
-      ingress:
-        enabled: true
-        hostname: central-ledger-transfer-prepare.sandbox.fynarfin.io
-    centralledger-handler-admin-transfer:
-      ingress:
-        enabled: true
-        hostname: central-ledger-admin-transfer.sandbox.fynarfin.io
-    centralledger-handler-transfer-position:
-      ingress:
-        enabled: true
-        hostname: central-ledger-transfer-position.sandbox.fynarfin.io
-    centralledger-handler-transfer-get:
-      ingress:
-        enabled: true
-        hostname: central-ledger-transfer-get.sandbox.fynarfin.io
-    centralledger-handler-transfer-fulfil:
-      ingress:
-        enabled: true
-        hostname: central-ledger-transfer-fulfil.sandbox.fynarfin.io
-    centralledger-handler-timeout:
-      ingress:
-        enabled: true
-        hostname: central-ledger-timeout.sandbox.fynarfin.io
-  centralsettlement:
-    centralsettlement-service:
-      ingress:
-        enabled: true
-        hostname: central-settlement-service.sandbox.fynarfin.io
-    centralsettlement-handler-deferredsettlement:
-      ingress:
-        enabled: true
-        hostname: central-settlement-deferredsettlement.sandbox.fynarfin.io
-    centralsettlement-handler-grosssettlement:
-      ingress:
-        enabled: true
-        hostname: central-settlement-rules.sandbox.fynarfin.io
-    centralsettlement-handler-rules:
-      ingress:
-        enabled: true
-        hostname: central-settlement-grosssettlement.sandbox.fynarfin.io
-  centraleventprocessor:
-    ingress:
+    centralledger:
       enabled: true
-      hostname: central-event-processor.sandbox.fynarfin.io
-ml-api-adapter:
-  enabled: true
-  ml-api-adapter-service:
-    ingress:
-      enabled: true
-      hostname: ml-api-adapter.sandbox.fynarfin.io
-  ml-api-adapter-handler-notification:
-    ingress:
-      enabled: true
-      hostname: ml-api-adapter-notification.sandbox.fynarfin.io
-emailnotifier:
-  ingress:
+      nameOverride: centralledger
+      centralledger-service:
+        ingress:
+          enabled: true
+          hostname: central-ledger.sandbox.fynarfin.io
+      centralledger-handler-transfer-prepare:
+        ingress:
+          enabled: true
+          hostname: central-ledger-transfer-prepare.sandbox.fynarfin.io
+      centralledger-handler-admin-transfer:
+        ingress:
+          enabled: true
+          hostname: central-ledger-admin-transfer.sandbox.fynarfin.io
+      centralledger-handler-transfer-position:
+        ingress:
+          enabled: true
+          hostname: central-ledger-transfer-position.sandbox.fynarfin.io
+      centralledger-handler-transfer-get:
+        ingress:
+          enabled: true
+          hostname: central-ledger-transfer-get.sandbox.fynarfin.io
+      centralledger-handler-transfer-fulfil:
+        ingress:
+          enabled: true
+          hostname: central-ledger-transfer-fulfil.sandbox.fynarfin.io
+      centralledger-handler-timeout:
+        ingress:
+          enabled: true
+          hostname: central-ledger-timeout.sandbox.fynarfin.io
+    centralsettlement:
+      centralsettlement-service:
+        ingress:
+          enabled: true
+          hostname: central-settlement-service.sandbox.fynarfin.io
+      centralsettlement-handler-deferredsettlement:
+        ingress:
+          enabled: true
+          hostname: central-settlement-deferredsettlement.sandbox.fynarfin.io
+      centralsettlement-handler-grosssettlement:
+        ingress:
+          enabled: true
+          hostname: central-settlement-rules.sandbox.fynarfin.io
+      centralsettlement-handler-rules:
+        ingress:
+          enabled: true
+          hostname: central-settlement-grosssettlement.sandbox.fynarfin.io
+    centraleventprocessor:
+      ingress:
+        enabled: true
+        hostname: central-event-processor.sandbox.fynarfin.io
+  ml-api-adapter:
     enabled: true
-    hostname: email-notifier.sandbox.fynarfin.io
-account-lookup-service:
+    ml-api-adapter-service:
+      ingress:
+        enabled: true
+        hostname: ml-api-adapter.sandbox.fynarfin.io
+    ml-api-adapter-handler-notification:
+      ingress:
+        enabled: true
+        hostname: ml-api-adapter-notification.sandbox.fynarfin.io
+  emailnotifier:
+    ingress:
+      enabled: true
+      hostname: email-notifier.sandbox.fynarfin.io
   account-lookup-service:
-    ingress:
-      enabled: true
-      hostname: account-lookup-service.sandbox.fynarfin.io
-  account-lookup-service-admin:
-    ingress:
-      enabled: true
-      hostname: account-lookup-service-admin.sandbox.fynarfin.io
-  als-oracle-pathfinder:
-    ingress:
-      hostname: als-oracle-pathfinder.sandbox.fynarfin.io
+    account-lookup-service:
+      ingress:
+        enabled: true
+        hostname: account-lookup-service.sandbox.fynarfin.io
+    account-lookup-service-admin:
+      ingress:
+        enabled: true
+        hostname: account-lookup-service-admin.sandbox.fynarfin.io
+    als-oracle-pathfinder:
+      ingress:
+        hostname: als-oracle-pathfinder.sandbox.fynarfin.io
 
-quoting-service:
-  ingress:
+  quoting-service:
+    ingress:
+      enabled: true
+      hostname: quoting-service.sandbox.fynarfin.io
+
+  transaction-requests-service:
+    ingress:
+      enabled: true
+      hostname: transaction-request-service.sandbox.fynarfin.io
+
+  thirdparty:
+    enabled: false
+    auth-svc:    
+      ingress:
+        enabled: false
+        hostname: auth-service.sandbox.fynarfin.io
+
+    consent-oracle:
+      ingress:
+        enabled: false
+        hostname: consent-oracle.sandbox.fynarfin.io
+
+    tp-api-svc:
+      ingress:
+        enabled: false
+        hostname: tp-api-svc.sandbox.fynarfin.io
+
+  simulator:
+    ingress:
+      enabled: true
+      hostname: moja-simulator.sandbox.fynarfin.io
+    simulators:
+      payerfsp:
+        ingress:
+          enabled: true
+          hosts:
+            -   sim-payerfsp.sandbox.fynarfin.io
+      payeefsp:
+        ingress:
+          enabled: true
+          hosts:
+            -   sim-payeefsp.sandbox.fynarfin.io
+      testfsp1:
+        ingress:
+          enabled: true
+          hosts:
+            -   sim-testfsp1.sandbox.fynarfin.io
+      testfsp2:
+        ingress:
+          enabled: true
+          hosts:
+            -   sim-testfsp2.sandbox.fynarfin.io
+
+      testfsp3:
+        ingress:
+          enabled: true
+          hosts:
+            -   sim-testfsp3.sandbox.fynarfin.io
+      testfsp4:
+        ingress:
+          enabled: true
+          hosts:
+            -   sim-testfsp4.sandbox.fynarfin.io
+    defaults:
+      ingress:
+        enabled: true
+        path: /
+        hosts:
+          -   mojaloop-simulators.sandbox.fynarfin.io
+  mojaloop-ttk-simulators:
+    mojaloop-ttk-sim1-svc:
+      ml-testing-toolkit:
+        ml-testing-toolkit-backend:
+          ingress:
+            enabled: true
+            hosts:
+              specApi:
+                host: 'ttksim1-specapi.sandbox.fynarfin.io'
+              adminApi:
+                host: 'ttksim1.local'
+        ml-testing-toolkit-frontend:
+          ingress:
+            enabled: true
+            hosts:
+              ui:
+                host: ttksim1.sandbox.fynarfin.io
+          config:
+            API_BASE_URL: 'http://ttksim1.sandbox.fynarfin.io'
+
+    mojaloop-ttk-sim2-svc:
+      ml-testing-toolkit:
+        ml-testing-toolkit-backend:
+          ingress:
+            enabled: true
+            hosts:
+              specApi:
+                host: 'ttksim2-specapi.sandbox.fynarfin.io'
+              adminApi:
+                host: 'ttksim2.sandbox.fynarfin.io'
+        
+        ml-testing-toolkit-frontend:
+          ingress:
+            enabled: true
+            hosts:
+              ui:
+                host: 'ttksim2.sandbox.fynarfin.io'
+          config:
+            API_BASE_URL: 'http://ttksim2.sandbox.fynarfin.io'
+
+    mojaloop-ttk-sim3-svc:
+      ml-testing-toolkit:
+        ml-testing-toolkit-backend:
+          ingress:
+            enabled: true
+            hosts:
+              specApi:
+                host: 'ttksim3-specapi.sandbox.fynarfin.io'
+              adminApi:
+                host: 'ttksim3.sandbox.fynarfin.io'
+        
+        ml-testing-toolkit-frontend:
+          ingress:
+            enabled: true
+            hosts:
+              ui:
+                host: 'ttksim3.sandbox.fynarfin.io'
+          config:
+            API_BASE_URL: 'http://ttksim3.sandbox.fynarfin.io'
+
+
+  mojaloop-bulk:
+    enabled: false
+
+    bulk-api-adapter:
+      bulk-api-adapter-service:
+        ingress:
+          enabled: true
+          hostname: bulk-api-adapter.sandbox.fynarfin.io
+
+      bulk-api-adapter-handler-notification:
+        ingress:
+          enabled: true
+          hostname: bulk-api-adapter-notification.sandbox.fynarfin.io
+
+    bulk-centralledger:
+
+      cl-handler-bulk-transfer-prepare:
+        ingress:
+          enabled: true
+          hostname: central-ledger-transfer-bulkprepare.sandbox.fynarfin.io
+      cl-handler-bulk-transfer-fulfil:
+        ingress:
+          enabled: true
+          hostname: central-ledger-transfer-bulkfulfil.sandbox.fynarfin.io
+      cl-handler-bulk-transfer-processing:
+        ingress:
+          enabled: true
+          hostname: central-ledger-transfer-bulkprocessing.sandbox.fynarfin.io
+      cl-handler-bulk-transfer-get:
+        ingress:
+          enabled: true
+          hostname: central-ledger-transfer-bulkget.sandbox.fynarfin.io
+  ml-testing-toolkit:
     enabled: true
-    hostname: quoting-service.sandbox.fynarfin.io
-
-transaction-requests-service:
-  ingress:
-    enabled: true
-    hostname: transaction-request-service.sandbox.fynarfin.io
-
-thirdparty:
-  enabled: false
-  auth-svc:    
-    ingress:
-      enabled: false
-      hostname: auth-service.sandbox.fynarfin.io
-
-  consent-oracle:
-    ingress:
-      enabled: false
-      hostname: consent-oracle.sandbox.fynarfin.io
-
-  tp-api-svc:
-    ingress:
-      enabled: false
-      hostname: tp-api-svc.sandbox.fynarfin.io
-
-simulator:
-  ingress:
-    enabled: true
-    hostname: moja-simulator.sandbox.fynarfin.io
-  simulators:
-    payerfsp:
+    ml-testing-toolkit-backend:
       ingress:
         enabled: true
         hosts:
-          -   sim-payerfsp.sandbox.fynarfin.io
-    payeefsp:
+          specApi:
+            host: testing-toolkit-specapi.sandbox.fynarfin.io
+          adminApi:
+            host: testing-toolkit.sandbox.fynarfin.io
+    ml-testing-toolkit-frontend:
       ingress:
         enabled: true
         hosts:
-          -   sim-payeefsp.sandbox.fynarfin.io
-    testfsp1:
-      ingress:
-        enabled: true
-        hosts:
-          -   sim-testfsp1.sandbox.fynarfin.io
-    testfsp2:
-      ingress:
-        enabled: true
-        hosts:
-          -   sim-testfsp2.sandbox.fynarfin.io
-
-    testfsp3:
-      ingress:
-        enabled: true
-        hosts:
-          -   sim-testfsp3.sandbox.fynarfin.io
-    testfsp4:
-      ingress:
-        enabled: true
-        hosts:
-          -   sim-testfsp4.sandbox.fynarfin.io
-  defaults:
-    ingress:
-      enabled: true
-      path: /
-      hosts:
-        -   mojaloop-simulators.sandbox.fynarfin.io
-mojaloop-ttk-simulators:
-  mojaloop-ttk-sim1-svc:
-    ml-testing-toolkit:
-      ml-testing-toolkit-backend:
-        ingress:
-          enabled: true
-          hosts:
-            specApi:
-              host: 'ttksim1-specapi.sandbox.fynarfin.io'
-            adminApi:
-              host: 'ttksim1.local'
-      ml-testing-toolkit-frontend:
-        ingress:
-          enabled: true
-          hosts:
-            ui:
-              host: ttksim1.sandbox.fynarfin.io
-        config:
-          API_BASE_URL: 'http://ttksim1.sandbox.fynarfin.io'
-
-  mojaloop-ttk-sim2-svc:
-    ml-testing-toolkit:
-      ml-testing-toolkit-backend:
-        ingress:
-          enabled: true
-          hosts:
-            specApi:
-              host: 'ttksim2-specapi.sandbox.fynarfin.io'
-            adminApi:
-              host: 'ttksim2.sandbox.fynarfin.io'
-       
-      ml-testing-toolkit-frontend:
-        ingress:
-          enabled: true
-          hosts:
-            ui:
-              host: 'ttksim2.sandbox.fynarfin.io'
-        config:
-          API_BASE_URL: 'http://ttksim2.sandbox.fynarfin.io'
-
-  mojaloop-ttk-sim3-svc:
-    ml-testing-toolkit:
-      ml-testing-toolkit-backend:
-        ingress:
-          enabled: true
-          hosts:
-            specApi:
-              host: 'ttksim3-specapi.sandbox.fynarfin.io'
-            adminApi:
-              host: 'ttksim3.sandbox.fynarfin.io'
-       
-      ml-testing-toolkit-frontend:
-        ingress:
-          enabled: true
-          hosts:
-            ui:
-              host: 'ttksim3.sandbox.fynarfin.io'
-        config:
-          API_BASE_URL: 'http://ttksim3.sandbox.fynarfin.io'
-
-
-mojaloop-bulk:
-  enabled: false
-
-  bulk-api-adapter:
-    bulk-api-adapter-service:
-      ingress:
-        enabled: true
-        hostname: bulk-api-adapter.sandbox.fynarfin.io
-
-    bulk-api-adapter-handler-notification:
-      ingress:
-        enabled: true
-        hostname: bulk-api-adapter-notification.sandbox.fynarfin.io
-
-  bulk-centralledger:
-
-    cl-handler-bulk-transfer-prepare:
-      ingress:
-        enabled: true
-        hostname: central-ledger-transfer-bulkprepare.sandbox.fynarfin.io
-    cl-handler-bulk-transfer-fulfil:
-      ingress:
-        enabled: true
-        hostname: central-ledger-transfer-bulkfulfil.sandbox.fynarfin.io
-    cl-handler-bulk-transfer-processing:
-      ingress:
-        enabled: true
-        hostname: central-ledger-transfer-bulkprocessing.sandbox.fynarfin.io
-    cl-handler-bulk-transfer-get:
-      ingress:
-        enabled: true
-        hostname: central-ledger-transfer-bulkget.sandbox.fynarfin.io
-ml-testing-toolkit:
-  enabled: true
-  ml-testing-toolkit-backend:
-    ingress:
-      enabled: true
-      hosts:
-        specApi:
-          host: testing-toolkit-specapi.sandbox.fynarfin.io
-        adminApi:
-          host: testing-toolkit.sandbox.fynarfin.io
-  ml-testing-toolkit-frontend:
-    ingress:
-      enabled: true
-      hosts:
-        ui:
-          host: testing-toolkit.sandbox.fynarfin.io
-    config:
-      API_BASE_URL: http://testing-toolkit.sandbox.fynarfin.io
+          ui:
+            host: testing-toolkit.sandbox.fynarfin.io
+      config:
+        API_BASE_URL: http://testing-toolkit.sandbox.fynarfin.io
