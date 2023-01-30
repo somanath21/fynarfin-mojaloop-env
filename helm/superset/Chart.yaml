@@ -1,5 +1,5 @@
 apiVersion: v2
-name: mojaloop
+name: fyn-mojaloop
 description: Mojaloop Sandbox Environment
 
 type: application

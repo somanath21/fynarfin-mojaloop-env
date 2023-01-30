@@ -1,4 +1,5 @@
 mojaloop:
+
   central:
     enabled: true
     centralledger:
@@ -53,6 +54,7 @@ mojaloop:
       ingress:
         enabled: true
         hostname: central-event-processor.sandbox.fynarfin.io
+
   ml-api-adapter:
     enabled: true
     ml-api-adapter-service:
@@ -63,10 +65,12 @@ mojaloop:
       ingress:
         enabled: true
         hostname: ml-api-adapter-notification.sandbox.fynarfin.io
+
   emailnotifier:
     ingress:
       enabled: true
       hostname: email-notifier.sandbox.fynarfin.io
+
   account-lookup-service:
     account-lookup-service:
       ingress:
@@ -108,9 +112,13 @@ mojaloop:
         hostname: tp-api-svc.sandbox.fynarfin.io
 
   simulator:
+    enabled: true
     ingress:
       enabled: true
       hostname: moja-simulator.sandbox.fynarfin.io
+
+
+  mojaloop-simulator:
     simulators:
       payerfsp:
         ingress:
@@ -149,7 +157,9 @@ mojaloop:
         path: /
         hosts:
           -   mojaloop-simulators.sandbox.fynarfin.io
+
   mojaloop-ttk-simulators:
+
     mojaloop-ttk-sim1-svc:
       ml-testing-toolkit:
         ml-testing-toolkit-backend:
@@ -159,7 +169,7 @@ mojaloop:
               specApi:
                 host: 'ttksim1-specapi.sandbox.fynarfin.io'
               adminApi:
-                host: 'ttksim1.local'
+                host: 'ttksim1.sandbox.fynarfin.io'
         ml-testing-toolkit-frontend:
           ingress:
             enabled: true
@@ -209,7 +219,6 @@ mojaloop:
           config:
             API_BASE_URL: 'http://ttksim3.sandbox.fynarfin.io'
 
-
   mojaloop-bulk:
     enabled: false
 
@@ -242,6 +251,7 @@ mojaloop:
         ingress:
           enabled: true
           hostname: central-ledger-transfer-bulkget.sandbox.fynarfin.io
+
   ml-testing-toolkit:
     enabled: true
     ml-testing-toolkit-backend:
