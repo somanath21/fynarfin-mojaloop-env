@@ -1,59 +1,57 @@
 mojaloop:
 
-  central:
+
+  centralledger:
     enabled: true
-    centralledger:
-      enabled: true
-      nameOverride: centralledger
-      centralledger-service:
-        ingress:
-          enabled: true
-          hostname: central-ledger.sandbox.fynarfin.io
-      centralledger-handler-transfer-prepare:
-        ingress:
-          enabled: true
-          hostname: central-ledger-transfer-prepare.sandbox.fynarfin.io
-      centralledger-handler-admin-transfer:
-        ingress:
-          enabled: true
-          hostname: central-ledger-admin-transfer.sandbox.fynarfin.io
-      centralledger-handler-transfer-position:
-        ingress:
-          enabled: true
-          hostname: central-ledger-transfer-position.sandbox.fynarfin.io
-      centralledger-handler-transfer-get:
-        ingress:
-          enabled: true
-          hostname: central-ledger-transfer-get.sandbox.fynarfin.io
-      centralledger-handler-transfer-fulfil:
-        ingress:
-          enabled: true
-          hostname: central-ledger-transfer-fulfil.sandbox.fynarfin.io
-      centralledger-handler-timeout:
-        ingress:
-          enabled: true
-          hostname: central-ledger-timeout.sandbox.fynarfin.io
-    centralsettlement:
-      centralsettlement-service:
-        ingress:
-          enabled: true
-          hostname: central-settlement-service.sandbox.fynarfin.io
-      centralsettlement-handler-deferredsettlement:
-        ingress:
-          enabled: true
-          hostname: central-settlement-deferredsettlement.sandbox.fynarfin.io
-      centralsettlement-handler-grosssettlement:
-        ingress:
-          enabled: true
-          hostname: central-settlement-rules.sandbox.fynarfin.io
-      centralsettlement-handler-rules:
-        ingress:
-          enabled: true
-          hostname: central-settlement-grosssettlement.sandbox.fynarfin.io
-    centraleventprocessor:
+    centralledger-service:
       ingress:
         enabled: true
-        hostname: central-event-processor.sandbox.fynarfin.io
+        hostname: central-ledger.sandbox.fynarfin.io
+    centralledger-handler-transfer-prepare:
+      ingress:
+        enabled: true
+        hostname: central-ledger-transfer-prepare.sandbox.fynarfin.io
+    centralledger-handler-admin-transfer:
+      ingress:
+        enabled: true
+        hostname: central-ledger-admin-transfer.sandbox.fynarfin.io
+    centralledger-handler-transfer-position:
+      ingress:
+        enabled: true
+        hostname: central-ledger-transfer-position.sandbox.fynarfin.io
+    centralledger-handler-transfer-get:
+      ingress:
+        enabled: true
+        hostname: central-ledger-transfer-get.sandbox.fynarfin.io
+    centralledger-handler-transfer-fulfil:
+      ingress:
+        enabled: true
+        hostname: central-ledger-transfer-fulfil.sandbox.fynarfin.io
+    centralledger-handler-timeout:
+      ingress:
+        enabled: true
+        hostname: central-ledger-timeout.sandbox.fynarfin.io
+  centralsettlement:
+    centralsettlement-service:
+      ingress:
+        enabled: true
+        hostname: central-settlement-service.sandbox.fynarfin.io
+    centralsettlement-handler-deferredsettlement:
+      ingress:
+        enabled: true
+        hostname: central-settlement-deferredsettlement.sandbox.fynarfin.io
+    centralsettlement-handler-grosssettlement:
+      ingress:
+        enabled: true
+        hostname: central-settlement-rules.sandbox.fynarfin.io
+    centralsettlement-handler-rules:
+      ingress:
+        enabled: true
+        hostname: central-settlement-grosssettlement.sandbox.fynarfin.io
+  centraleventprocessor:
+    ingress:
+      enabled: true
+      hostname: central-event-processor.sandbox.fynarfin.io
 
   ml-api-adapter:
     enabled: true
