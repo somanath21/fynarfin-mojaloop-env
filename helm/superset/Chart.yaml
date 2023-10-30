@@ -3,8 +3,8 @@ name: fyn-mojaloop
 description: Mojaloop Sandbox Environment
 
 type: application
-version: 14.1.0
-appVersion: 14.1.0
+version: 15.1.0
+appVersion: 15.1.0
 
 dependencies:
 - name: mojaloop
