@@ -65,6 +65,7 @@ mojaloop:
         hostname: ml-api-adapter-notification.sandbox.fynarfin.io
 
   emailnotifier:
+    enabled: false
     ingress:
       enabled: true
       hostname: email-notifier.sandbox.fynarfin.io
@@ -88,6 +89,7 @@ mojaloop:
       hostname: quoting-service.sandbox.fynarfin.io
 
   transaction-requests-service:
+    enabled: false
     ingress:
       enabled: true
       hostname: transaction-request-service.sandbox.fynarfin.io
@@ -117,6 +119,7 @@ mojaloop:
 
 
   mojaloop-simulator:
+    enabled: false
     simulators:
       payerfsp:
         ingress:
@@ -157,7 +160,7 @@ mojaloop:
           -   mojaloop-simulators.sandbox.fynarfin.io
 
   mojaloop-ttk-simulators:
-
+    enabled: false
     mojaloop-ttk-sim1-svc:
       ml-testing-toolkit:
         ml-testing-toolkit-backend:
@@ -251,7 +254,7 @@ mojaloop:
           hostname: central-ledger-transfer-bulkget.sandbox.fynarfin.io
 
   ml-testing-toolkit:
-    enabled: true
+    enabled: false
     ml-testing-toolkit-backend:
       ingress:
         enabled: true
