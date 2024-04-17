@@ -271,3 +271,4 @@ mojaloop:
             host: testing-toolkit.sandbox.fynarfin.io
       config:
         API_BASE_URL: http://testing-toolkit.sandbox.fynarfin.io
+
