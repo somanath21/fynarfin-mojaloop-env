@@ -1,0 +1,19 @@
+example-mojaloop-backend:
+  kafka:
+    listeners:
+      client:
+        name: CLIENT
+        protocol: PLAINTEXT
+        sslClientAuth: ""
+      controller:
+        name: CONTROLLER
+        protocol: PLAINTEXT
+        sslClientAuth: ""
+      external:
+        name: EXTERNAL
+        protocol: PLAINTEXT
+        sslClientAuth: ""
+      interbroker:
+        protocol: PLAINTEXT
+        name: INTERNAL
+        sslClientAuth: ""

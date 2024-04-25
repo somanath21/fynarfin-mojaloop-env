@@ -1,5 +1,6 @@
+
 apiVersion: v2
-name: fyn-mojaloop
+name: backend
 description: Mojaloop Sandbox Environment
 
 type: application
@@ -7,7 +8,6 @@ version: 1.0.0
 appVersion: 1.0.0
 
 dependencies:
-- name: mojaloop
+- name: example-mojaloop-backend
   repository: https://mojaloop.io/helm/repo
-  version: 15.1.0
-
+  version: 15.7.0
